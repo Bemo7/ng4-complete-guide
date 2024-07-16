@@ -3,6 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-server',
   templateUrl: './server.component.html',
+  styles: [
+    `
+      .online {
+        color: white;
+      }
+    `,
+  ],
 })
 export class ServerComponent {
   serverId: number = 10;
@@ -17,6 +24,6 @@ export class ServerComponent {
   }
 
   getColor(): string {
-    return this.serverStatus === 'online' ? 'palegreen' : 'mistyrose';
+    return this.serverStatus === 'online' ? 'green' : 'mistyrose';
   }
 }
